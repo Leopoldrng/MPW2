@@ -477,7 +477,7 @@ section h2 {
     transform: scale(1.2); /* Vergrößerung beim Hover */
 }
 
-/* Anpassungen für mobile Geräte (z.B. Bildschirme kleiner als 768px) */
+/* Anpassungen für mobile Geräte (Bildschirme kleiner als 768px) */
 @media (max-width: 768px) {
     .linkedin-link img {
         width: 24px;  /* Kleinere Größe des LinkedIn-Icons für Mobilgeräte */
@@ -489,8 +489,17 @@ section h2 {
     }
 }
 
+/* Spezielle Anpassungen für sehr kleine Bildschirme (z.B. Smartphones unter 480px Breite) */
+@media (max-width: 480px) {
+    .linkedin-link img {
+        width: 20px;  /* Noch kleinere Größe des LinkedIn-Icons für sehr kleine Bildschirme */
+        height: 20px;
+    }
 
-
+    .linkedin-link img:hover {
+        transform: scale(1.05); /* Minimalere Vergrößerung beim Hover auf sehr kleinen Geräten */
+    }
+}
 
 
 /* Supporters and Collaborations Section */
