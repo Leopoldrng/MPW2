@@ -305,20 +305,29 @@
     <h2>Contact Us</h2>
     <form action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="49305aaa-c6a8-4652-934f-5a6ee7073255">
+        <input type="hidden" name="apikey" value="49305aaa-c6a8-4652-934f-5a6ee7073255">
         <input type="hidden" name="subject" value="New Submission from Web3Forms">
         <input type="hidden" name="from_name" value="Your Website Name">
-        <input type="hidden" name="ccemail" value="partner@example.com">
+
         <input type="hidden" name="redirect" value="https://web3forms.com/success">
-        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <label>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        </label>
         <h3>E-Mail</h3>
-        <input type="email" name="email" required>
+        <label>
+            <input type="email" name="email" required>
+        </label>
         <h3>Name</h3>
-        <input type="text" name="First Name" required>
+        <label>
+            <input type="text" name="First Name" required>
+        </label>
         <h3>Message</h3>
-        <textarea name="message" required></textarea>
+        <label>
+            <textarea name="message" required></textarea>
+        </label>
         <button type="submit">Submit Form</button>
         <div class="h-captcha" data-captcha="true"></div>
-        <input type="hidden" name="apikey" value="49305aaa-c6a8-4652-934f-5a6ee7073255">
+
     </form>
 
     <script src="https://web3forms.com/client/script.js" async defer></script>
