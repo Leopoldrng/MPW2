@@ -49,7 +49,7 @@ header.scrolled {
 }
 
 .logo {
-    height: 50px;
+    height: 70px;
     margin-right: 10px;
 }
 
@@ -218,7 +218,7 @@ section h2 {
 }
 
 .landing-content .landing-logo {
-    width: 200px;
+    width: 350px;
     margin-bottom: 20px;
 }
 .landing-content h1 {
@@ -976,7 +976,7 @@ footer p {
     margin-bottom: 40px;
     letter-spacing: 1px; /* Leichte Abstände zwischen den Buchstaben */
     font-weight: bold;
-    text-transform: uppercase; /* Großbuchstaben für einen kräftigen Titel */
+   /* Großbuchstaben für einen kräftigen Titel */
     color: #fff; /* Weißer Text */
 }
 
@@ -1203,7 +1203,7 @@ footer p {
     color: #fff;
     font-size: 1.8em; /* Kleinere Überschrift */
     margin-bottom: 20px;
-    text-transform: uppercase;
+
     text-align: center;
 }
 
