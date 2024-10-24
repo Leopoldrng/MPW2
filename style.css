@@ -1216,24 +1216,23 @@ footer p {
 .product-description ul li::before {
     content: none; /* Kein Symbol vor den Listenpunkten */
 }
-
-/* Bild-Anpassungen */
+/* Video-Anpassungen */
 .product-image {
     flex: 1;
     max-width: 50%;
-    text-align: center; /* Bild zentriert */
+    text-align: center; /* Video zentriert */
 }
 
-.product-image img {
-    max-width: 90%; /* Bildgröße etwas verkleinert */
+.product-image video {
+    max-width: 90%; /* Videogröße etwas verkleinert */
     height: auto;
-    filter: brightness(0.7); /* Bild etwas aufgehellt */
-    border-radius: 50%;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten */
+    filter: brightness(0.7); /* Video etwas aufgehellt */
+    border-radius: 50%; /* Rundes Video */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten für das Video */
     transition: filter 0.3s ease-in-out;
 }
 
-.product-image img:hover {
+.product-image video:hover {
     filter: brightness(0.9); /* Leichtes Aufhellen beim Hover */
 }
 
@@ -1246,7 +1245,7 @@ footer p {
     }
 
     .product-image {
-        max-width: 80%; /* Größere Bildbreite */
+        max-width: 80%; /* Größere Videobreite */
     }
 }
 
@@ -1257,7 +1256,7 @@ footer p {
     }
 
     .product-image {
-        max-width: 90%; /* Maximale Bildgröße auf sehr kleinen Bildschirmen */
+        max-width: 90%; /* Maximale Videogröße auf sehr kleinen Bildschirmen */
     }
 
     #product-about h2 {
@@ -1269,6 +1268,7 @@ footer p {
         line-height: 1.7; /* Etwas kleinere Zeilenhöhe */
     }
 }
+
 #contact-background-video {
     position: absolute;
     top: 50%;

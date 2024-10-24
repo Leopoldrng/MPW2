@@ -194,3 +194,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });});
+
+
+// Event Listener für das Ende des Videos
+const video = document.getElementById('product-video');
+
+// Event Listener für das Ende des Videos
+video.addEventListener('ended', function () {
+    video.pause(); // Pausiere das Video nach dem Ende
+    console.log('Video ist am letzten Frame gestoppt');
+});
