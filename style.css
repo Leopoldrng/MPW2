@@ -1147,88 +1147,87 @@ footer p {
     object-fit: cover; /* Video füllt den gesamten Bereich aus */
 }
 
-/* Allgemeines Styling für die Section */
-#product-about {
-    position: relative;
-    z-index: 1;
-    padding: 70px 20px; /* Mehr Padding oben und unten */
-    background-color: transparent;
-    color: #fff;
-    text-align: center; /* Zentriert */
-}
-
-#product-about h2 {
-    font-size: 3em; /* Größerer Titel */
-    margin-bottom: 40px; /* Mehr Abstand nach unten */
-    color: #fff;
-    text-align: center;
-}
-
-#product-about h3 {
-    color: #fff;
-    font-size: 2em; /* Größerer Text */
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    text-align: center; /* Zentriert für Konsistenz */
-    position: relative;
-}
-
-#product-about h3::before {
-    content: none;
-}
-
-#product-about p {
-    font-size: 1.2em;
-    max-width: 1000px; /* Begrenzte Breite für lesbaren Text */
-    margin: 0 auto 50px auto;
-    line-height: 1.8; /* Größere Zeilenhöhe für bessere Lesbarkeit */
-    color: #fff;
-    position: relative;
-}
-
-#product-about p::before {
-    content: none;
-}
-
 /* Produkt- und Vision-Container */
 .product-about-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; /* Inhalte in der Mitte zentrieren */
-    gap: 40px; /* Mehr Abstand zwischen Text und Bild */
-    max-width: 1100px; /* Containerbreite verringert */
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1); /* Leicht transparenter Container-Hintergrund */
+    border-radius: 15px; /* Runde Ecken für den Container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
 }
 
 /* Beschreibung des Produkts */
 .product-description {
     flex: 1;
     max-width: 600px;
-    text-align: center; /* Text zentriert */
+    text-align: left;
 }
 
-/* Beschreibung des Produkts */
+/* Liste modernisieren */
 .product-description ul {
     list-style-type: none; /* Entfernt die Standard-Bulletpoints */
-    padding-left: 0; /* Entfernt den Einzug */
-    font-size: 1.2em;
+    padding-left: 0;
     margin: 0;
-    position: relative;
-    color: #fff; /* Weißer Text */
-}
-
-.product-description ul li {
-    margin-bottom: 20px; /* Abstand zwischen den Listenelementen */
-    position: relative;
-    padding-left: 0; /* Entfernt Platz für Bulletpoints oder Symbole */
     color: #fff;
 }
 
-/* Entfernt das Symbol vor den Listenelementen */
-.product-description ul li::before {
-    content: none; /* Kein Symbol vor den Listenpunkten */
+.product-description ul li {
+    font-size: 1.2em;
+    color: #fff; /* Weißer Text */
+    margin-bottom: 15px;
+    padding: 10px 15px; /* Innenabstand innerhalb der Box */
+    background-color: rgba(255, 255, 255, 0.1); /* Leicht transparenter Box-Hintergrund */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten für die Box */
+    transition: background-color 0.3s ease;
+}
+
+.product-description ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Box hebt sich beim Hover etwas ab */
+}
+
+#product-about h2 {
+    font-size: 2.5em; /* Kleinere Überschrift */
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+#product-about h3 {
+    color: #fff;
+    font-size: 1.8em; /* Kleinere Überschrift */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#product-about p {
+    font-size: 1.2em;
+    max-width: 900px; /* Begrenzte Breite für besseren Lesefluss */
+    margin: 0 auto 50px auto;
+    line-height: 1.8;
+    color: #ddd; /* Etwas hellerer Text */
+    text-align: center;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 1024px) {
+    .product-about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .product-description ul li {
+        margin-bottom: 20px;
+        padding: 15px; /* Größere Boxen für kleinere Bildschirme */
+    }
 }
 /* Video-Anpassungen */
 .product-image {
