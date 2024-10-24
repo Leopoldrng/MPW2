@@ -694,7 +694,16 @@ form button {
 form button:hover {
     background-color: #ccc;
 }
+.h-captcha{
 
+
+    padding: 15px 30px;
+    border: none;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 /* Footer-Stile */
 /* Footer-Stile */
 footer {
