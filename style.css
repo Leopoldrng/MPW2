@@ -397,10 +397,6 @@ section h2 {
 
 
 
-
-
-
-
 /* Unser Team */
 .team-members {
     display: flex;
@@ -429,11 +425,11 @@ section h2 {
 .team-member img {
     width: 180px;
     height: 180px;
-    border-radius: 50%;
+    border-radius: 50%; /* Rundes Profilbild */
     object-fit: cover;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Stärkerer Schatten um das Bild */
-    border: 4px solid #fff; /* Weißer Rand um das Bild */
+    border: 1px solid #fff; /* Weißer Rand um das Profilbild */
 }
 
 .team-member h3 {
@@ -461,15 +457,13 @@ section h2 {
     color: #ccc;
     padding: 0 20px;
 }
-/* Standardgrößen für Desktop */
-.linkedin-link {
-    display: inline-block;
-    margin-top: 10px;
-}
 
+/* Standardgrößen für das LinkedIn-Icon */
 .linkedin-link img {
-    width: 30px;  /* Standardgröße des LinkedIn-Icons */
+    width: 30px;  /* Größe des LinkedIn-Icons */
     height: 30px;
+    border-radius: 0; /* Verhindert abgerundete Ecken für das LinkedIn-Icon */
+    border: none; /* Entfernt den weißen Rahmen um das LinkedIn-Icon */
     transition: transform 0.3s ease;
 }
 
@@ -477,30 +471,21 @@ section h2 {
     transform: scale(1.2); /* Vergrößerung beim Hover */
 }
 
-/* Anpassungen für mobile Geräte (Bildschirme kleiner als 768px) */
+/* Anpassungen für mobile Geräte */
 @media (max-width: 768px) {
     .linkedin-link img {
-        width: 24px;  /* Kleinere Größe des LinkedIn-Icons für Mobilgeräte */
+        width: 24px; /* Kleinere Größe des LinkedIn-Icons auf mobilen Geräten */
         height: 24px;
     }
-
-    .linkedin-link img:hover {
-        transform: scale(1.1); /* Leicht geringere Vergrößerung beim Hover auf Mobilgeräten */
-    }
 }
 
-/* Spezielle Anpassungen für sehr kleine Bildschirme (z.B. Smartphones unter 480px Breite) */
+/* Anpassungen für sehr kleine Bildschirme */
 @media (max-width: 480px) {
     .linkedin-link img {
-        width: 20px;  /* Noch kleinere Größe des LinkedIn-Icons für sehr kleine Bildschirme */
+        width: 20px; /* Noch kleinere Größe auf sehr kleinen Bildschirmen */
         height: 20px;
     }
-
-    .linkedin-link img:hover {
-        transform: scale(1.05); /* Minimalere Vergrößerung beim Hover auf sehr kleinen Geräten */
-    }
 }
-
 
 /* Supporters and Collaborations Section */
 #partners {
@@ -827,9 +812,16 @@ footer p {
         max-width: 100%;
     }
 
+    /* Spezifische Regel nur für Teammitgliedsbilder */
     .team-member img {
         width: 150px;
         height: 150px;
+    }
+
+    /* Spezifische Regel für LinkedIn-Logo */
+    .linkedin-link img {
+        width: 30px; /* Größe des LinkedIn-Logos bleibt kleiner */
+        height: 30px;
     }
 
     .carousel-button {
@@ -957,24 +949,27 @@ footer p {
 }
 
 /* Problems Section */
-/* Problems Section */
 #problems {
     padding: 80px 20px;
-    background-color: rgba(17, 17, 17, 0.8); /* Semi-transparent background */
+    background-color: #111; /* Schwarzer Hintergrund */
     color: #fff;
     text-align: center;
-    backdrop-filter: blur(5px); /* Optional blur effect */
+    backdrop-filter: blur(5px); /* Blur-Effekt für einen modernen Look */
 }
 
 #problems h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    letter-spacing: 1px; /* Leichte Abstände zwischen den Buchstaben */
+    font-weight: bold;
+    text-transform: uppercase; /* Großbuchstaben für einen kräftigen Titel */
+    color: #fff; /* Weißer Text */
 }
 
 .problems-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px; /* Mehr Abstand zwischen den Items */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -984,38 +979,81 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex: 1 1 calc(50% - 20px);
-    background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent background */
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, background-color 0.3s;
+    flex: 1 1 calc(50% - 30px); /* Mehr Abstand für bessere Lesbarkeit */
+    background-color: #222; /* Dunkleres Schwarz für den Hintergrund */
+    padding: 30px; /* Mehr Innenabstand */
+    border-radius: 20px; /* Weiche Ecken */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Tieferer Schatten für mehr Tiefe */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Weicher Übergang */
     text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.problem-item:hover {
+    transform: translateY(-10px); /* Hebt das Item leicht an */
+    background-color: #333; /* Hellere Farbe beim Hover */
 }
 
 .problem-item img {
     width: 30%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 10px; /* Runde Ecken für das Bild */
     margin-right: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Leichter Bildschatten */
 }
 
 .problem-text {
-    width: 60%;
+    width: 70%; /* Mehr Platz für den Text */
 }
 
 .problem-text h5 {
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: 22px; /* Größere Schriftgröße */
+    font-weight: bold; /* Fettgedruckter Text */
+    color: #fff; /* Weißer Text für klare Lesbarkeit */
+    margin-bottom: 15px;
 }
 
 .problem-text p {
     font-size: 16px;
-    color: #ccc;
+    color: #ccc; /* Hellerer Text für bessere Lesbarkeit */
+    transition: color 0.3s ease; /* Weicher Übergang bei Hover */
 }
 
+.problem-item:hover .problem-text p {
+    color: #fff; /* Text wird weiß beim Hover */
+}
+
+/* Hover-Effekt für den ganzen Container */
+.problem-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); /* Weißer Verlauf */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.problem-item:hover::before {
+    opacity: 1; /* Subtiler Highlight-Effekt beim Hover */
+}
+
+/* Media Queries für mobile Geräte */
+@media (max-width: 768px) {
+    .problem-item {
+        flex: 1 1 100%; /* Volle Breite auf kleineren Geräten */
+    }
+
+    .problem-text p {
+        display: block; /* "Discover more" auch auf mobilen Geräten anzeigen */
+        color: #aaa; /* Etwas hellerer Text für mobiles Design */
+    }
+}
 /* Modal Styles */
 .modal {
     display: none;
