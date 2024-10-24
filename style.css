@@ -49,7 +49,7 @@ header.scrolled {
 }
 
 .logo {
-    height: 100px;
+    height: 50px;
     margin-right: 10px;
 }
 
@@ -218,7 +218,7 @@ section h2 {
 }
 
 .landing-content .landing-logo {
-    width: 20px;
+    width: 200px;
     margin-bottom: 20px;
 }
 
@@ -262,11 +262,11 @@ section h2 {
     }
 
     .landing-content h2 {
-        font-size: 8vw;
+        font-size: 5vw;
     }
 
     .landing-content p {
-        font-size: 5vw;
+        font-size: 3vw;
     }
 
     .landing-content .button {
@@ -1099,133 +1099,116 @@ footer p {
 #product-about {
     position: relative;
     z-index: 1;
-    padding: 50px 0;
-    background-color: transparent; /* Hintergrundfarbe entfernt */
+    padding: 70px 20px; /* Mehr Padding oben und unten */
+    background-color: transparent;
     color: #fff;
-    text-align: left;
+    text-align: center; /* Zentriert */
 }
 
-
 #product-about h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #fff; /* Weißer Text */
-    text-align: center; /* Titel bleibt zentriert */
+    font-size: 3em; /* Größerer Titel */
+    margin-bottom: 40px; /* Mehr Abstand nach unten */
+    color: #fff;
+    text-align: center;
 }
 
 #product-about h3 {
-    color: #fff; /* Weißer Text */
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    text-transform: uppercase; /* Großbuchstaben */
-    text-align: left;
+    color: #fff;
+    font-size: 2em; /* Größerer Text */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center; /* Zentriert für Konsistenz */
     position: relative;
 }
 
 #product-about h3::before {
-    content: '';
-    width: 50px;
-    height: 50px;
-    background-color: #fff; /* Akzentfarbe */
-    border-radius: 50%; /* Scharfer Kreis */
-    position: absolute;
-    top: -10px;
-    left: -70px; /* Positioniert den Kreis links vom Text */
+    content: none;
 }
 
 #product-about p {
-    font-size: 1.1em;
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-    color: #fff; /* Weißer Text */
+    font-size: 1.2em;
+    max-width: 1000px; /* Begrenzte Breite für lesbaren Text */
+    margin: 0 auto 50px auto;
+    line-height: 1.8; /* Größere Zeilenhöhe für bessere Lesbarkeit */
+    color: #fff;
     position: relative;
 }
 
 #product-about p::before {
-    content: '';
-    width: 30px;
-    height: 30px;
-    background-color: #fff; /* Akzentfarbe */
-    border-radius: 50%; /* Scharfer Kreis */
-    position: absolute;
-    top: 10px;
-    left: -50px; /* Positioniert den Kreis links vom Text */
+    content: none;
 }
 
 /* Produkt- und Vision-Container */
 .product-about-container {
     display: flex;
-    flex-direction: row; /* Nebeneinander */
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between; /* Abstand zwischen Text und Bild */
-    gap: 30px;
-    max-width: 1200px;
+    justify-content: center; /* Inhalte in der Mitte zentrieren */
+    gap: 40px; /* Mehr Abstand zwischen Text und Bild */
+    max-width: 1100px; /* Containerbreite verringert */
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Beschreibung des Produkts */
 .product-description {
     flex: 1;
     max-width: 600px;
+    text-align: center; /* Text zentriert */
 }
 
+/* Beschreibung des Produkts */
 .product-description ul {
-    list-style-type: none; /* Entfernt Standard-Aufzählungszeichen */
-    padding-left: 0;
-    font-size: 1.1em;
+    list-style-type: none; /* Entfernt die Standard-Bulletpoints */
+    padding-left: 0; /* Entfernt den Einzug */
+    font-size: 1.2em;
     margin: 0;
     position: relative;
     color: #fff; /* Weißer Text */
 }
 
 .product-description ul li {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Abstand zwischen den Listenelementen */
     position: relative;
-    padding-left: 40px; /* Platz für den Kreis */
-    color: #fff; /* Weißer Text */
+    padding-left: 0; /* Entfernt Platz für Bulletpoints oder Symbole */
+    color: #fff;
 }
 
+/* Entfernt das Symbol vor den Listenelementen */
 .product-description ul li::before {
-    content: '';
-    width: 15px;
-    height: 15px;
-    background-color: #fff; /* Akzentfarbe */
-    border-radius: 50%; /* Scharfer Kreis */
-    position: absolute;
-    left: 0;
-    top: 0;
+    content: none; /* Kein Symbol vor den Listenpunkten */
 }
 
 /* Bild-Anpassungen */
 .product-image {
     flex: 1;
-    max-width: 50%; /* Bild kleiner gemacht */
-    text-align: right;
+    max-width: 50%;
+    text-align: center; /* Bild zentriert */
 }
 
 .product-image img {
-    max-width: 100%; /* Bildgröße begrenzt auf Container */
+    max-width: 90%; /* Bildgröße etwas verkleinert */
     height: auto;
-    filter: brightness(0.6); /* Bild wird dunkler */
-    border-radius: 50%; /* Scharfer Kreis für das Bild */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten */
+    filter: brightness(0.7); /* Bild etwas aufgehellt */
+    border-radius: 50%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten */
     transition: filter 0.3s ease-in-out;
 }
 
 .product-image img:hover {
-    filter: brightness(0.8); /* Bild wird etwas heller beim Hover */
+    filter: brightness(0.9); /* Leichtes Aufhellen beim Hover */
 }
 
 /* Responsive Anpassungen */
 @media (max-width: 1024px) {
     .product-about-container {
-        flex-direction: column; /* Spalten-Layout auf kleineren Bildschirmen */
+        flex-direction: column; /* Spalten-Layout */
         text-align: center;
+        padding: 40px 0; /* Mehr Padding für kleinere Bildschirme */
     }
 
     .product-image {
-        max-width: 80%; /* Größere Bildbreite auf kleineren Geräten */
+        max-width: 80%; /* Größere Bildbreite */
     }
 }
 
@@ -1236,10 +1219,18 @@ footer p {
     }
 
     .product-image {
-        max-width: 100%; /* Maximale Bildgröße auf sehr kleinen Bildschirmen */
+        max-width: 90%; /* Maximale Bildgröße auf sehr kleinen Bildschirmen */
+    }
+
+    #product-about h2 {
+        font-size: 2.5em; /* Titelgröße an kleinere Bildschirme angepasst */
+    }
+
+    #product-about p {
+        font-size: 1.1em; /* Kleinere Schriftgröße für bessere Lesbarkeit */
+        line-height: 1.7; /* Etwas kleinere Zeilenhöhe */
     }
 }
-/* Hintergrundvideo Styling für das Kontaktformular */
 #contact-background-video {
     position: absolute;
     top: 50%;
