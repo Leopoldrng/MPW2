@@ -1233,24 +1233,24 @@ footer p {
 /* Hintergrundvideo Styling für das Kontaktformular */
 #contact-background-video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Zentriert das Video */
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1; /* Video wird hinter den Text gelegt */
-    opacity: 0.5; /* Optional, um den Text besser sichtbar zu machen */
-    object-fit: cover; /* Video füllt den gesamten Bereich aus */
-    pointer-events: none; /* Verhindert, dass das Video klickbar ist */
+    z-index: -1; /* Video hinter den Text legen */
+    opacity: 0.5; /* Text hervorheben */
+    object-fit: cover; /* Video füllt den gesamten Bereich */
+    pointer-events: none; /* Video nicht klickbar */
 }
 
-/* Styling für den Contact-Bereich */
 #contact {
     position: relative;
     z-index: 1;
     padding: 60px 20px;
-    background-color: transparent; /* Hintergrundfarbe entfernt */
+    background-color: transparent;
     color: #fff;
     text-align: center;
 }
@@ -1296,7 +1296,7 @@ footer p {
     z-index: 1;
 }
 
-/* Optionale responsive Anpassungen */
+/* Mobile Optimierungen */
 @media (max-width: 767px) {
     #contact h2 {
         font-size: 24px;
@@ -1308,5 +1308,18 @@ footer p {
 
     #contact button {
         font-size: 16px;
+    }
+
+    /* Für kleinere Bildschirme wird das Video proportional skaliert */
+    #contact-background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        opacity: 0.4; /* Geringere Deckkraft auf mobilen Geräten */
+    }
+
+    /* Falls das Video zu viel Platz wegnimmt, können wir es im Hochformat unsichtbar machen */
+    #contact-background-video {
+        display: none; /* Deaktiviert Video auf mobilen Geräten */
     }
 }
