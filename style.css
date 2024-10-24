@@ -221,9 +221,14 @@ section h2 {
     width: 200px;
     margin-bottom: 20px;
 }
-
+.landing-content h1 {
+    font-size:50px;
+    margin-bottom: 20px;
+    color: #fff;
+    animation: ease-in;
+}
 .landing-content h2 {
-    font-size: 48px;
+    font-size: 30px;
     margin-bottom: 20px;
     color: #fff;
     animation: fadeInDown 1s ease-out;
@@ -260,7 +265,9 @@ section h2 {
     .landing-content {
         padding: 0 10px;
     }
-
+    .landing-content h1 {
+        font-size: 8vw; /* Responsive size for h1 on smaller screens */
+    }
     .landing-content h2 {
         font-size: 5vw;
     }
