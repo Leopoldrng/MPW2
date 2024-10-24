@@ -440,17 +440,24 @@ section h2 {
 }
 
 .team-member ul {
-    list-style-type: disc; /* Sichtbare Bullet Points */
-    padding-left: 20px; /* Einrückung der Liste */
+    list-style-type: none; /* Entfernt die Bulletpoints */
+    padding-left: 0; /* Kein Einrücken der Liste */
     margin: 0;
-    text-align: left; /* Text linksbündig */
+    text-align: center; /* Text linksbündig */
 }
 
 .team-member ul li {
     font-size: 16px;
     color: #fff; /* Weißer Text */
-    margin-bottom: 8px; /* Abstand zwischen den Punkten */
+    margin-bottom: 15px; /* Mehr Abstand zwischen den Punkten */
+    padding: 10px 15px; /* Innenabstand innerhalb der Box */
+    background-color: rgba(255, 255, 255, 0.1); /* Leicht transparenter Box-Hintergrund */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten für die Box */
+    transition: background-color 0.3s ease;
 }
+
+
 
 .team-member p {
     font-size: 16px;
